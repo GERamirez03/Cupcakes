@@ -89,7 +89,7 @@ def delete_cupcake(cupcake_id):
     db.session.delete(cupcake)
     db.session.commit()
 
-    return jsonify(message="Deleted")
+    return (jsonify(message="Deleted"), 200)
 
 @app.route('/')
 def show_homepage():
